@@ -9,8 +9,10 @@
     <link rel="icon" href="img/favicon.ico">
     <title>Duchesse.io</title>
 
+    <!-- build:css /medias/toulouse.css -->
     <link href="/medias/vendor.css" rel="stylesheet" />
     <link href="/medias/toulouse.css" rel="stylesheet" />
+    <!-- endbuild -->
   </head>
 
   <body ng-controller="MainCtrl">
@@ -68,17 +70,19 @@
       </footer>
     </div> <!-- /container -->
 
+    <!-- build:js /toulouse.js -->
     <script src="/medias/vendor.js"></script>
-    <script src="services/storage.js"></script>
-    <script src="services/movies.js"></script>
-    <script src="services/torrent.js"></script>
-    <script src="controllers/main.js"></script>
-    <script src="controllers/home.js"></script>
-    <script src="controllers/store.js"></script>
-    <script src="controllers/downloads.js"></script>
-    <script src="controllers/actor.js"></script>
-    <script src="controllers/editor.js"></script>
-    <script src="app.js"></script>
+    <script src="/app/services/storage.js"></script>
+    <script src="/app/services/movies.js"></script>
+    <script src="/app/services/torrent.js"></script>
+    <script src="/app/controllers/main.js"></script>
+    <script src="/app/controllers/home.js"></script>
+    <script src="/app/controllers/store.js"></script>
+    <script src="/app/controllers/downloads.js"></script>
+    <script src="/app/controllers/actor.js"></script>
+    <script src="/app/controllers/editor.js"></script>
+    <script src="/app/app.js"></script>
+    <!-- endbuild -->
   </body>
 </html>
 

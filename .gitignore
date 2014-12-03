@@ -3,3 +3,5 @@ node_modules
 medias/vendor.js
 medias/vendor.css
 medias/toulouse.css
+dist
+.tmp
