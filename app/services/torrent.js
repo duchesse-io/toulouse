@@ -1,7 +1,7 @@
 var torrent = angular.module('toulouse.torrent', [
 ]);
 
-torrent.service('$torrent', function($http, $q){
+torrent.service('$torrent', ['$http', '$q', function($http, $q){
 
   var api_url = 'http://api.trolls.cat/api';
 
@@ -61,4 +61,4 @@ torrent.service('$torrent', function($http, $q){
     }
   };
 
-});
+}]);

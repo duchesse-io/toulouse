@@ -2,7 +2,7 @@ var movies = angular.module('toulouse.movies', [
 
 ]);
 
-movies.service('$movies', function($http, $q){
+movies.service('$movies', ['$http', '$q', function($http, $q){
 
   var api_key = '52dda17c8cf0bbc2451f9cde1fea0913';
   var api_url = 'http://api.themoviedb.org/3/';
@@ -84,4 +84,4 @@ movies.service('$movies', function($http, $q){
   };
 
 
-});
+}]);

@@ -1,7 +1,7 @@
 var downloads = angular.module('toulouse.downloads', [
 ]);
 
-downloads.controller('DownloadsCtrl', function($scope, $torrent){
+downloads.controller('DownloadsCtrl', ['$scope', '$torrent', function($scope, $torrent){
 
   // List all downloads
   $scope.downloads = null;
@@ -9,4 +9,4 @@ downloads.controller('DownloadsCtrl', function($scope, $torrent){
     $scope.downloads = downloads.movies;
   });
 
-});
+}]);

@@ -4,7 +4,7 @@ var editor = angular.module('toulouse.editor', [
   'toulouse.storage',
 ]);
 
-editor.controller('EditorCtrl', function($routeParams, $scope, $movies, $torrent){
+editor.controller('EditorCtrl', ['$routeParams', '$scope', '$movies', '$torrent', function($routeParams, $scope, $movies, $torrent){
   $scope.error = false;
   $scope.ask_creation = false;
 
@@ -78,12 +78,12 @@ editor.controller('EditorCtrl', function($routeParams, $scope, $movies, $torrent
   $movies.actors($routeParams.movie_id).then(function(peoples){
     $scope.actors = peoples.cast;
   });
-});
+}]);
 
 
 // Controller between editor & video
 // to avoid double instanciation of EditorCtrl
-editor.controller('SandwichCtrl', function($scope, $torrent, $storage){
+editor.controller('SandwichCtrl', ['$scope', '$torrent', '$storage', function($scope, $torrent, $storage){
 
   $scope.torrent = null;
   $scope.movie = null;
@@ -100,10 +100,10 @@ editor.controller('SandwichCtrl', function($scope, $torrent, $storage){
       });
     }
   });
-});
+}]);
 
 // Our own video player
-editor.directive('editorVideo', function($torrent, $window, $storage){
+editor.directive('editorVideo', ['$torrent', '$window', '$storage', function($torrent, $window, $storage){
   return {
     restrict : 'AE', // Must be an attribute or element
     replace : 'true',
@@ -243,7 +243,7 @@ editor.directive('editorVideo', function($torrent, $window, $storage){
     },
     templateUrl : 'templates/video.html',
   };
-});
+}]);
 
 // Display nicely seconds
 editor.filter('nice_seconds', function(){

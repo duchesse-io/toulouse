@@ -1,7 +1,7 @@
 var storage = angular.module('toulouse.storage', [
 ]);
 
-storage.service('$storage', function(localStorageService){
+storage.service('$storage', ['localStorageService', function(localStorageService){
   return {
 
     // Add a capture in browser storage
@@ -27,4 +27,4 @@ storage.service('$storage', function(localStorageService){
       return out;
     },
   };
-});
+}]);

@@ -2,7 +2,7 @@ var home = angular.module('toulouse.home', [
   'toulouse.movies',
 ]);
 
-home.controller('HomeCtrl', function($scope, $routeParams, $movies){
+home.controller('HomeCtrl', ['$scope', '$routeParams', '$movies', function($scope, $routeParams, $movies){
 
   // Hide navbar search
   $scope.$emit('hide_search');
@@ -34,4 +34,4 @@ home.controller('HomeCtrl', function($scope, $routeParams, $movies){
     show_movies($scope.search_terms);
   };
 
-});
+}]);

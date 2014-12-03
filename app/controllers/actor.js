@@ -2,7 +2,7 @@ var actor = angular.module('toulouse.actor', [
   'toulouse.movies',
 ]);
 
-actor.controller('ActorCtrl', function($scope, $routeParams, $movies){
+actor.controller('ActorCtrl', ['$scope', '$routeParams', '$movies', function($scope, $routeParams, $movies){
 
   // Show navbar search
   $scope.$emit('show_search');
@@ -19,4 +19,4 @@ actor.controller('ActorCtrl', function($scope, $routeParams, $movies){
     $scope.movies = movies.cast;
   });
 
-});
+}]);

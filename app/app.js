@@ -13,7 +13,7 @@ var toulouse = angular.module('toulouse', [
   'toulouse.editor',
 ]);
 
-toulouse.config(function($routeProvider, $sceProvider, localStorageServiceProvider){
+toulouse.config(['$routeProvider', '$sceProvider', 'localStorageServiceProvider', function($routeProvider, $sceProvider, localStorageServiceProvider){
 
   // For dev only, disable inclusion security
   $sceProvider.enabled(false);
@@ -50,4 +50,4 @@ toulouse.config(function($routeProvider, $sceProvider, localStorageServiceProvid
     .otherwise({
       redirectTo : '/',
     });
-});
+}]);
