@@ -1,2 +1,5 @@
-app/bower_components
+bower_components
 node_modules
+medias/vendor.js
+medias/vendor.css
+medias/toulouse.css
